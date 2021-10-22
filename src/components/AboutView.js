@@ -3,7 +3,7 @@ import Hero from './Hero';
 const AboutView = () => {
     return (
         <div>
-            <Hero />
+            <Hero text="About Us" />
             <p>About Us</p>
         </div>
     )
