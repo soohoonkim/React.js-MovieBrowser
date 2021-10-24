@@ -1,19 +1,27 @@
 import './App.css';
+import { useState, useEffect } from 'react'
 import Navbar from './components/Navbar';
 import Home from './components/Home';
 import AboutView from './components/AboutView';
-import {Switch, Route } from 'react-router-dom';
+import SearchView from './components/SearchView';
+import { Switch, Route } from 'react-router-dom';
 
 function App() {
+
+  const [searchResults, setSearchResults] = useState([]);
+  const [searchText, setSearchText] = useState("");
+
   return (
     <div>
-      <Navbar />
+      <Navbar searchText={searchText} setSearchText={setSearchText} />
       <Switch>
         <Route path="/" exact>
           <Home />
         </Route>
         <Route path="/about" component={AboutView} /> 
-        <AboutView />
+        <Route path="/search">
+          <SearchView keyword={searchText} searchReasults={searchResults} />
+        </Route>
       </Switch>
     </div>
   );
