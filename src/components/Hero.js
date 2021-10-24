@@ -1,9 +1,9 @@
 const Hero = ({ text }) => {
     return (
         <header className="bg-dark text-white p-5">
-            <p>
+            <h1>
                 {text}
-            </p>
+            </h1>
         </header>
     )
 }
