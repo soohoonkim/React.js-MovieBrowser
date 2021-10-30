@@ -3,7 +3,6 @@ import { Link } from 'react-router-dom'
 const Navbar = ({ searchText, setSearchText }) => {
 
     const updateSearchText = (e) => {
-        console.log(e.target.value)
         setSearchText(e.target.value)
     }
 
