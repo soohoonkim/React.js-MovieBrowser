@@ -1,6 +1,7 @@
 import Hero from './Hero';
 import { useParams } from 'react-router-dom';
 import { useEffect, useState } from 'react';
+import missingImage from './icons8-image-file-240.png';
 
 const MovieView = () => {
     const { id } = useParams()
@@ -31,7 +32,8 @@ const MovieView = () => {
                     <div className="container my-5">
                         <div className="row">
                             <div className="col-md-3">
-                                No Image Available
+                                <img src={missingImage} alt="..." className="img-fluid shadow rounded mx-auto d-block my-5" />
+                                <p className="text-center">Image Not Available</p>
                             </div>
                             <div className="col-md-9">
                             <h2>{movieDetails.original_title}</h2>
